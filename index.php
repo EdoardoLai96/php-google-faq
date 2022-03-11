@@ -35,16 +35,12 @@ $arrayFaq = [
         Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.",
     ],
     [
-        "domanda" => "Stabilire il paese associato al tuo account",
-        "risposta" => "Quando crei un nuovo Account Google, lo associamo a un paese in base a dove è stato creato. Per quanto riguarda gli account creati almeno un anno fa, usiamo il paese da cui accedi solitamente ai servizi Google, in genere i servizi in cui hai trascorso più tempo nell'ultimo anno.
-
-        I viaggi frequenti solitamente non influiscono sul paese associato al tuo account. Se ti trasferisci in un altro paese, potrebbe occorrere circa un anno per aggiornare l'associazione del paese.
-        
-        Se il paese associato al tuo account non corrisponde al tuo paese di residenza, il motivo potrebbe essere la differenza tra il paese in cui lavori e il paese in cui risiedi, l'installazione di una rete privata virtuale (VPN) per mascherare il tuo indirizzo IP oppure la residenza vicino a un confine territoriale. Contattaci se ritieni che il paese associato al tuo account sia sbagliato.",
-    ],
-    [
         "domanda" => "Come faccio a rimuovere informazioni su di me dai risultati di ricerca di Google?",
         "risposta" => "I risultati di ricerca di Google rispecchiano i contenuti pubblicamente disponibili sul Web. I motori di ricerca non possono rimuovere i contenuti direttamente dai siti web, quindi rimuovere risultati di ricerca da Google non consente di rimuovere i contenuti dal Web. Se desideri rimuovere qualcosa dal Web, devi contattare il webmaster del sito su cui sono pubblicati i contenuti e chiedergli di apportare una modifica. Inoltre, se, ai sensi delle leggi europee per la protezione dei dati, desideri richiedere la rimozione di determinate informazioni su di te visualizzate nei risultati di ricerca di Google, fai clic qui. Una volta che i contenuti saranno stati rimossi e che Google avrà rilevato l'aggiornamento, le informazioni non verranno più visualizzate nei risultati di ricerca di Google. In caso di una richiesta di rimozione urgente, è inoltre possibile visitare la nostra pagina di assistenza per avere ulteriori informazioni.",
+    ],
+    [
+        "domanda" => "Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?",
+        "risposta" => "In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di URL referrer. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio.",
     ],
 ]
 
@@ -65,32 +61,39 @@ $arrayFaq = [
 </head>
 <body>
     <div class="ms_container">
-        <header class="container-fluid">
-            <div class="row eader-top">
-                <div class="col">
-                    <h3 class="text-primary d-inline block">Google</h3>
+        <header class="container-fluid py-3">
+            <div class="row header-top">
+                <div class="col mb-3">
+                    <h3 class="text-primary d-inline block ms_spacing_negative me-3">
+                        <span>G</span>
+                        <span class="text-danger">o</span>
+                        <span class="text-warning">o</span>
+                        <span>g</span>
+                        <span class="text-success">l</span>
+                        <span class="text-danger">e</span>
+                    </h3>
                     <h3 class="text-secondary fw-light d-inline block">Privacy e Termini</h3>
                 </div>
 
             </div>
             <div class="row header-bottom">
-              <div class="col ">
+              <div class="col py-3">
                  <span class="text-secondary me-3">Introduzione</span>
                  <span class="text-secondary me-3">Norme sulla Privacy</span>
                  <span class="text-secondary me-3">Termini di Servizio</span>
                  <span class="text-secondary me-3">Tecologie</span>
-                 <span class="text-primary me-3 text-decoration-underline">Domande frequenti</span>
+                 <span class="ms_active text-primary me-3 ">Domande frequenti</span>
               </div>
             </div>
         </header>
 
-        <hr>
+        <hr class="my-0">
 
         <main>
-            <div class="container-fluid">
+            <div class="container py-5">
              <?php foreach($arrayFaq as $chiave => $valore){
-                 echo '<h1>' . $valore["domanda"] . '<h1/>';
-                 echo $valore["risposta"] . "<br>";
+                 echo '<h3 class = "fw-light" >' . $valore["domanda"] . '</h3>';
+                 echo '<p class = "my-3">' . $valore["risposta"] . '</p>';
                
              } ?> 
         </main>
